@@ -1,4 +1,5 @@
-import 'package:cached_network image/cached_network_image.dart';
+
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 import 'data/api_provider.dart';
@@ -57,7 +58,7 @@ class _HomeState extends State<Home> {
                   date: '${snapshot.data.results[index].releaseDate}',
                   voteAverage: '${snapshot.data.results[index].voteAverage}',
                   onTap:() { 
-                    Navigator.of(context).push(MaterialPageRout(
+                    Navigator.of(context).push(MaterialPageRoute(
                       builder: (context) => MovieDetail( 
                         movie: snapshot.data.results[index],
                       )));
@@ -106,7 +107,7 @@ class _HomeState extends State<Home> {
                            margin: EdgeInsets.only(top: 20),
                            child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
-                              mainAxisAlignment: ,
+                              mainAxisSize: MainAxisSize.min,
                               children: <Widget>[
                                 Text(
                                   title,
@@ -156,6 +157,9 @@ class _HomeState extends State<Home> {
             );
           }
         }
+
+MovieDetail({movie}) {
+}
 
 
 
